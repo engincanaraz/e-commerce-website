@@ -1,6 +1,8 @@
 :root {
-  --topbar-color: #003f62;
-  --warning-color: #EDA415;
+  --primary-color: #1E3E62 ;
+  --warning-color: #FF6500;
+  --secondary-color: #0B192C;
+  --tertiary-color: #000000;
 }
 body{
   background-color: #f8f9fa;
@@ -10,7 +12,7 @@ body{
 .top-bar {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: var(--topbar-color);
+  background-color: var(--primary-color);
 }
 
 .navbar-brand{
@@ -51,7 +53,7 @@ color: var(--warning-color);
 
 .search-input:focus {
   box-shadow: none;
-  border-color: var(--warning-color);
+  border-color: var(--secondary-color);
 }
 
 .badge {
@@ -59,12 +61,10 @@ color: var(--warning-color);
   padding: 4px 6px;
 }
 
-.badge-warning {
-  background-color: var(--warning-color) !important;
+.badge-color {
+  background-color: var(--warning-color) !important ;
   color: #fff;
 }
-
-/* Navbar Styles */
 .navbar {
   background-color: #fff;
   padding: 0;
@@ -149,4 +149,31 @@ color: var(--warning-color);
 #locationText {
     margin-left: 5px;
     font-size: 14px;
+}
+
+.slider_nav {
+  max-height: 250px;
+}
+@media (max-width: 1200px) {
+  .slider_nav {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .slider_nav {
+    max-height: 350px;
+  }
+}
+
+.nav-pills  {
+  color: var(--warning-color);
+}
+.nav-link:hover {
+  color: var(--warning-color);
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--primary-color); 
+    color: #fff;
 }
