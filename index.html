@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
@@ -13,23 +18,38 @@
     <title>E-commerce</title>
   </head>
   <body class="bg-light">
+    <!-- Header -->
     <header>
       <section class="top-bar">
         <div class="container">
           <div class="row gy-2 align-items-center">
             <div class="col-lg-2 col-sm-4 col-4">
-              <a href="index.html" class="navbar-brand">Techify</a>
+              <a href="index.html" class="navbar-brand">
+                <i class="fa fa-truck-fast"></i> hızlıpazar
+              </a>
             </div>
             <div class="col-lg-5 col-sm-8 col-8 order-lg-last">
               <div class="text-end">
-                <a href="#" class="btn bg-light">
-                  <i class="fa fa-user"></i> <span class="ms-1 d-none d-sm-block"> Hesabım</span>
+                <a href="#" class="btn">
+                  <i class="fa fa-user" style="color: #fff"></i>
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >Hesabım</span
+                  >
                 </a>
-                <a href="#" class="btn bg-light">
-                  <i class="fa fa-heart"></i> <span class="ms-1 d-none d-sm-block"> Favoriler</span>
+                <a href="#" class="btn position-relative">
+                  <i class="fa fa-heart" style="color: #fff"></i>
+                  <span class="ms-1 d-none d-sm-inline text-white">Listem</span>
+                  
                 </a>
-                <a href="#" class="btn bg-light">
-                  <i class="fa fa-shopping-cart"></i> <span class="ms-1 d-none d-sm-block"> Sepetim</span>
+                <a href="#" class="btn position-relative">
+                  <i class="fa fa-shopping-cart" style="color: #fff"></i>
+                  <span class="ms-1 d-none d-sm-inline text-white"
+                    >Sepetim</span
+                  >
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                    0
+                  </span>
                 </a>
               </div>
             </div>
@@ -38,11 +58,9 @@
                 <div class="input-group">
                   <input
                     type="text"
-                    class="form-control"
-                    placeholder="Anahtar kelime" />
-                  <button class="btn btn-primary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
+                    class="form-control search-input"
+                    placeholder="Ürün, kategori veya marka ara" />
+                  <button class="btn btn-warning" type="button">Ara</button>
                 </div>
               </form>
             </div>
@@ -51,6 +69,137 @@
       </section>
     </header>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ms-1" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle ps-0" data-bs-toggle="dropdown">Elektronik</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Telefon</a></li>
+                <li><a class="dropdown-item" href="#">Bilgisayar</a></li>
+                <li><a class="dropdown-item" href="#">Tablet</a></li>
+                <li><a class="dropdown-item" href="#">Kamera</a></li>
+                <li><a class="dropdown-item" href="#">Oyun</a></li>
+                <li><a class="dropdown-item" href="#">Akıllı Saat</a></li>
+                <li><a class="dropdown-item" href="#">Elektrikli Araçlar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Moda</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Kadın Giyim</a></li>
+                <li><a class="dropdown-item" href="#">Erkek Giyim</a>
+                <li><a class="dropdown-item" href="#">Çocuk</a></li>
+                <li><a class="dropdown-item" href="#">Ayakkabı</a></li>
+                <li><a class="dropdown-item" href="#">Aksesuar</a></li>
+                <li><a class="dropdown-item" href="#">Spor</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ev, Yaşam</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Sofra Mutfak</a></li>
+                <li><a class="dropdown-item" href="#">Ev gereçleri</a></li>
+                <li><a class="dropdown-item" href="#">Mobilya</a></li>
+                <li><a class="dropdown-item" href="#">Aydınlatma</a></li>
+                <li><a class="dropdown-item" href="#">Dekorasyon</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Oto, Bahçe ,Yapı Market</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Yapı Market</a></li>
+                <li><a class="dropdown-item" href="#">Hırdavat</a></li>
+                <li><a class="dropdown-item" href="#">Bahçe</a></li>
+                <li><a class="dropdown-item" href="#">Oto</a></li>
+                <li><a class="dropdown-item" href="#">Elektrik</a></li>
+                <li><a class="dropdown-item" href="#">Motosiklet</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Anne, Bebek</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Bebek</a></li>
+                <li><a class="dropdown-item" href="#">Emzirme</a></li>
+                <li><a class="dropdown-item" href="#">Anne</a></li>
+                <li><a class="dropdown-item" href="#">Çocuk</a></li>
+                <li><a class="dropdown-item" href="#"></a>Bebek Odası</a></li>
+                <li><a class="dropdown-item" href="#">Güvenlik</a></li>
+
+              </ul>
+            </li>
+          </ul>
+          <div class="nav-item ms-auto">
+            <a href="#" class="nav-link text-primary" id="locationButton">
+              <i class="fa-solid fa-map-pin"></i>
+              <span id="locationText" >Konum</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const locationButton = document.getElementById('locationButton');
+        const locationText = document.getElementById('locationText');
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                locationText.textContent = 'Konum alınıyor...';
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                locationText.textContent = 'Konum servisi desteklenmiyor';
+            }
+        }
+
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            // Reverse Geocoding için OpenStreetMap Nominatim API kullanıyoruz
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
+                .then(response => response.json())
+                .then(data => {
+                    const city = data.address.city || data.address.town || data.address.village || 'Bilinmeyen Şehir';
+                    locationText.textContent = city;
+                })
+                .catch(error => {
+                    locationText.textContent = 'Konum bulunamadı';
+                });
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    locationText.textContent = 'Konum izni reddedildi';
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    locationText.textContent = 'Konum bilgisi mevcut değil';
+                    break;
+                case error.TIMEOUT:
+                    locationText.textContent = 'İstek zaman aşımına uğradı';
+                    break;
+                case error.UNKNOWN_ERROR:
+                    locationText.textContent = 'Bilinmeyen bir hata oluştu';
+                    break;
+            }
+        }
+
+        // Konum butonuna tıklandığında
+        locationButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            getLocation();
+        });
+    });
+    </script>
   </body>
 </html>
