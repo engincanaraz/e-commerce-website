@@ -233,6 +233,12 @@ footer {
   background-color: var(--primary-color);
   color: #fff;
 }
+.btn-outline-light:hover {
+  color: #fff;
+  background-color: #f5a623;
+  transform: scale(1.1);
+}
+
 .product-details{
   background-color: var(--light-color);
   margin-top: 1.5rem;
@@ -277,3 +283,15 @@ footer {
   object-fit: cover;
   cursor: zoom-in;
 }
+.checked{
+  color: var(--warning-color);
+}
+h4.title {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.6;
+}
+

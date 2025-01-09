@@ -228,10 +228,13 @@
                 <i class="fa fa-heart"></i>
               </a>
               <a href="details.html" class="title text-truncate"> <b>Apple</b> iPhone 13 128 GB Beyaz</a>
-              <div class="price-wrap">
+              <div class="price-wrap mb-3">
                 <span class="price-discount">34.399 TL</span>
                 <del class="price">38.999 TL</del>
               </div>
+              <a href="#" class=" btn btn-light w-100">
+                <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+              </a>
              </div>
             </div>
           </div>
@@ -246,10 +249,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Apple</b> iPhone 13 128 GB Siyah</a>
-                <div class="price-wrap">
+                <div class="price-wrap mb-3">
                   <span class="price-discount">34.199 TL</span>
                   <del class="price">38.699 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>
@@ -264,10 +270,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Poco</b> C65 256 GB 8 GB Ram</a>
-                <div class="price-wrap">
+                <div class="price-wrap mb-3">
                   <span class="price-discount">8.299 TL</span>
                   <del class="price">10.999 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>
@@ -282,10 +291,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Xiaomi</b> Redmi Note 13 Pro 512GB 12GB </a>
-                <div class="price-wrap">
+                <div class="price-wrap mb-3">
                   <span class="price-discount">17.189 TL</span>
                   <del class="price">19.999 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>
@@ -300,10 +312,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Apple</b> iPhone 16 Pro 256 GB Çöl Titanyum</a>
-                <div class="price-wrap">
+                <div class="price-wrap mb-3">
                   <span class="price-discount">94.999 TL</span>
                   <del class="price">98.999 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>  
@@ -318,10 +333,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Samsung</b>  Galaxy A06 128 GB 4 GB Ram</a>
-                <div class="price-wrap">
+                <div class="price-wrap mb-3">
                   <span class="price-discount">7.199 TL</span>
                   <del class="price">8.999 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>  
@@ -336,10 +354,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Samsung</b> Galaxy S24 FE 128 GB 8 GB Ram</a>  
-                <div class="price-wrap">
+                <div class="price-wrap mb-3">
                   <span class="price-discount">25.169 TL</span>
                   <del class="price">29.999 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>  
@@ -354,10 +375,13 @@
                   <i class="fa fa-heart"></i>
                 </a>
                 <a href="#" class="title text-truncate"> <b>Apple</b> iPhone 15 128 GB Yeşil</a>
-                <div class="price-wrap"></div>
+                <div class="price-wrap mb-3"></div>
                   <span class="price-discount">52.299 TL</span>
                   <del class="price">59.999 TL</del>
                 </div>
+                <a href="#" class=" btn btn-light w-100">
+                  <i class="fa fa-shopping-basket me-1"></i> Sepete Ekle
+                </a>
               </div>
             </div>
           </div>  
@@ -409,59 +433,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const locationButton = document.getElementById('locationButton');
-        const locationText = document.getElementById('locationText');
-
-        function getLocation() {
-            if (navigator.geolocation) {
-                locationText.textContent = 'Konum alınıyor...';
-                navigator.geolocation.getCurrentPosition(showPosition, showError);
-            } else {
-                locationText.textContent = 'Konum servisi desteklenmiyor';
-            }
-        }
-
-        function showPosition(position) {
-            const latitude = position.coords.latitude;
-            const longitude = position.coords.longitude;
-            
-
-            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
-                .then(response => response.json())
-                .then(data => {
-                    const city = data.address.city || data.address.town || data.address.village || 'Bilinmeyen Şehir';
-                    locationText.textContent = city;
-                })
-                .catch(error => {
-                    locationText.textContent = 'Konum bulunamadı';
-                });
-        }
-
-        function showError(error) {
-            switch(error.code) {
-                case error.PERMISSION_DENIED:
-                    locationText.textContent = 'Konum izni reddedildi';
-                    break;
-                case error.POSITION_UNAVAILABLE:
-                    locationText.textContent = 'Konum bilgisi mevcut değil';
-                    break;
-                case error.TIMEOUT:
-                    locationText.textContent = 'İstek zaman aşımına uğradı';
-                    break;
-                case error.UNKNOWN_ERROR:
-                    locationText.textContent = 'Bilinmeyen bir hata oluştu';
-                    break;
-            }
-        }
-
-
-        locationButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            getLocation();
-        });
-    });
-    </script>
+    <script src="js/geolocation.js"></script>
   </body>
 </html>
