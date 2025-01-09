@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Hızlıpazar</title>
   </head>
-  <body class="bg-light mb-5">
+  <body class="bg-light">
     <!-- Header -->
     <header>
       <section class="top-bar">
@@ -146,7 +146,7 @@
     </nav>
 
     <!-- Slider -->
-     <section class="pt-3">
+     <section class="mt-3">
       <div class="container">
         <div class="card">
         <div class="row p-1 p-lg-2 gx-1">
@@ -213,8 +213,7 @@
      </section>
 
      <!-- Product Cards-->
-
-     <section class="pt-3">
+     <section class="mt-3">
       <div class="container ">
         <h3 class="h4 mb-1 mb-lg-3">Son Eklenenler</h3>
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-4 g-4 ">
@@ -300,10 +299,10 @@
                 <a href="" class="float-end btn btn-light">
                   <i class="fa fa-heart"></i>
                 </a>
-                <a href="#" class="title text-truncate"> <b>Apple</b> iPhone 16 256 GB Çöl Titanyum</a>
+                <a href="#" class="title text-truncate"> <b>Apple</b> iPhone 16 Pro 256 GB Çöl Titanyum</a>
                 <div class="price-wrap">
                   <span class="price-discount">94.999 TL</span>
-                  <del class="price">109.999 TL</del>
+                  <del class="price">98.999 TL</del>
                 </div>
               </div>
             </div>
@@ -368,6 +367,44 @@
       </div>
      </section>
 
+     <!-- Footer -->
+
+     <footer class="mt-3 py-4">
+      <div class="container">
+        <div class="row gy-3">
+          <div class="col-md-6 col-lg-4">
+            <form>
+              <div class="input-group">
+                <input type="email" class="form-control" placeholder="E-posta giriniz">
+                <button class="btn btn-outline-warning" type="button">Abone Ol</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 col-lg-8">
+            <nav class="text-center text-md-end">
+              <a href="https://www.linkedin.com/in/engincanaraz" class="btn btn-icon btn-outline-light">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/engincanaraz" class="btn btn-icon btn-outline-light">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="btn btn-icon btn-outline-light">
+                <i class="fab fa-medium"></i>
+              </a>
+              <a href="#" class="btn btn-icon btn-outline-light">
+                <i class="fab fa-stack-overflow"></i>
+              </a>
+            </nav>
+          </div>
+          <div class="col-12">
+            <p class="text-center text-md-start text-white">
+              @2025 Hızlıpazar. Tüm hakları saklıdır.
+            </p>
+          </div>
+        </div>
+      </div>
+     </footer>
+
 
 
 
@@ -390,7 +427,7 @@
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
             
-            // Reverse Geocoding için OpenStreetMap Nominatim API kullanıyoruz
+
             fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
                 .then(response => response.json())
                 .then(data => {
@@ -419,7 +456,7 @@
             }
         }
 
-        // Konum butonuna tıklandığında
+
         locationButton.addEventListener('click', function(e) {
             e.preventDefault();
             getLocation();

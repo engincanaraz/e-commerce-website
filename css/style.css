@@ -180,8 +180,14 @@ body {
 }
 
 .img-wrap {
-  position: relative;
-  padding: 1rem;
+  text-align: center;
+  height: 240px;
+}
+.img-wrap img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .img-wrap .badge {
@@ -189,22 +195,22 @@ body {
   top: 10px;
   right: 10px;
 }
-.info-wrap{
+.info-wrap {
   padding: 1rem 1.2rem;
 }
-.title{
+.title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
   max-width: 100%;
 }
-.info-wrap .title{
-display: block;
-text-decoration: none;
-color: var(--secondary-color);
+.info-wrap .title {
+  display: block;
+  text-decoration: none;
+  color: var(--secondary-color);
 }
-.price-wrap .price-discount{
+.price-wrap .price-discount {
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -221,4 +227,9 @@ color: var(--secondary-color);
   .price-wrap .price-discount {
     font-size: 0.9rem;
   }
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
 }
