@@ -2,6 +2,10 @@
 
 Bu proje, **Bootstrap framework'ünü** öğrenmek ve uygulamak amacıyla geliştirilmiştir. 🚀
 
+## Canlı Demo 🌐
+
+[Hızlıpazar'ı buradan inceleyebilirsiniz! 🚀](https://hizlipazar.netlify.app)
+
 ## Kullanılan Teknolojiler 🛠️
 
 - **HTML5**: Web sayfasının yapısını oluşturmak için kullanılmıştır. 📄
