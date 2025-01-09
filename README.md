@@ -1,6 +1,6 @@
-# Hızlıpazar 🛒✨
+# Hızlıpazar e-ticaret sitesi🛒✨
 
-Hızlıpazar, kullanıcıların çeşitli ürünleri inceleyip satın alabileceği bir e-ticaret platformudur. Bu proje, **Bootstrap framework'ünü** öğrenmek ve uygulamak amacıyla geliştirilmiştir. 🚀
+Bu proje, **Bootstrap framework'ünü** öğrenmek ve uygulamak amacıyla geliştirilmiştir. 🚀
 
 ## Kullanılan Teknolojiler 🛠️
 
