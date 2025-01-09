@@ -40,12 +40,3 @@ Hızlıpazar, kullanıcıların çeşitli ürünleri inceleyip satın alabilece�
    ```
 
 4. Tarayıcıda `http://localhost:3000` adresine gidin.
-
-## Katkıda Bulunma
-
-Katkıda bulunmak isterseniz, lütfen bir pull request gönderin.
-
-## Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır.
-
