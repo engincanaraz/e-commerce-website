@@ -19,8 +19,15 @@ body {
 .navbar-brand {
   color: var(--warning-color);
   font-size: 2rem;
-
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.navbar-brand i {
+  font-size: 1.8rem;
 }
 
 .btn-light {
@@ -182,12 +189,21 @@ body {
 .img-wrap {
   text-align: center;
   height: 240px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
 }
+
 .img-wrap img {
-  height: 100%;
-  width: auto;
+  max-height: 100%;
   max-width: 100%;
-  object-fit: cover;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .img-wrap .badge {
